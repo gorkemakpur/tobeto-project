@@ -2,17 +2,22 @@ import React from 'react'
 import { Col, Container, ListGroup, Row   } from 'react-bootstrap'
 
 export default function Content() {
-  const videoList = [
+  /*const videoList = [
     { id: 1, title: 'Video 1' },
     { id: 2, title: 'Video 2' },
     { id: 3, title: 'Video 3' },
     { id: 4, title: 'Video 4' },
     { id: 5, title: 'Video 5' },
-  ];
+  ];*/
   return (
+
+    <div>
+      Merhaba Content
+    </div>
+
+    /*
     <Container fluid>
       <Row>
-        {/* Video Listesi */}
         <Col md={5}>
           <ListGroup>
             {videoList.map((video) => (
@@ -21,10 +26,8 @@ export default function Content() {
           </ListGroup>
         </Col>
 
-        {/* Boş Alan */}
         <Col md={2}></Col>
 
-        {/* Video Oynatıcı */}
         <Col md={5}>
           <iframe width="560" 
           height="315" 
@@ -38,5 +41,6 @@ export default function Content() {
         </Col>
       </Row>
     </Container>
+    */
   )
 }

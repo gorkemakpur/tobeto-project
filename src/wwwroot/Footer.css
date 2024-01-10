@@ -1,10 +1,14 @@
 .footer {
     background-color: #9933FF;
+    
     padding: 20px;
     color: white;
     text-align: center;
     margin: 0;
     padding: 13px;
+    position:fixed;
+    bottom: 0;
+    width: 100%;
   }
   .text-center {
     text-align: center;

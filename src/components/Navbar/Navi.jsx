@@ -6,8 +6,7 @@ import '../../../src/wwwroot/Navi.css';
 
 export default function Navi() {
   return (
-
-    <Navbar expand="lg" className="bg-body-tertiary">
+    <Navbar expand="sm" className="bg-body-tertiary">
     <Container >
       <Navbar.Brand href="#home">
          <Image src="https://tobeto.com/_next/static/media/tobeto-logo.29b55e1c.svg" width={"100px"}></Image>
@@ -17,16 +16,16 @@ export default function Navi() {
       <Navbar.Collapse id="basic-navbar-nav">
 
         <Nav className="mx-auto" expand="sm">
-          <Nav.Link href="#home" >Anasayfa</Nav.Link>
-          <Nav.Link href="#link">Profilim</Nav.Link>
-          <Nav.Link href="#home">Değerlendirmeler</Nav.Link>
-          <Nav.Link href="#link">Katalog</Nav.Link>
-          <Nav.Link href="#home">Takvim</Nav.Link>
-          <Nav.Link href="#link">İstanbul Kodluyor</Nav.Link>
+          <Nav.Link to="#home" className="p-4">Anasayfa</Nav.Link>
+          <Nav.Link to="#link" className="p-4">Profilim</Nav.Link>
+          <Nav.Link to="#home" className="p-4">Değerlendirmeler</Nav.Link>
+          <Nav.Link to="#link" className="p-4">Katalog</Nav.Link>
+          <Nav.Link to="#home" className="p-4">Takvim</Nav.Link>
+          <Nav.Link to="#link" className="p-4">İstanbul Kodluyor</Nav.Link>
 
         </Nav>
 
-        <Nav className="d-flex align-items-center">
+        <Nav className="profile d-flex align-items-center">
           <Nav.Link className="text-white me-3">
             <FontAwesomeIcon icon={faSave} style={{ color: 'purple' }} />
           </Nav.Link>

@@ -2,16 +2,17 @@ import { faSave } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import React from "react";
 import { Container, Image, Nav, NavDropdown, Navbar} from "react-bootstrap";
-import '../../../src/wwwroot/Navi.css';
+import '../Navbar/Navi.css';
 
 export default function Navi() {
   return (
     <Navbar expand="sm" className="bg-body-tertiary">
     <Container >
       <Navbar.Brand href="#home">
-         <Image src="https://tobeto.com/_next/static/media/tobeto-logo.29b55e1c.svg" width={"100px"}></Image>
+         <Image src="https://tobeto.com/_next/static/media/tobeto-logo.29b55e1c.svg" width={"100px"} className="m-3"></Image>
       </Navbar.Brand>
       <Navbar.Toggle aria-controls="basic-navbar-nav" />
+
 
       <Navbar.Collapse id="basic-navbar-nav">
 
@@ -22,7 +23,6 @@ export default function Navi() {
           <Nav.Link to="#link" className="p-4">Katalog</Nav.Link>
           <Nav.Link to="#home" className="p-4">Takvim</Nav.Link>
           <Nav.Link to="#link" className="p-4">İstanbul Kodluyor</Nav.Link>
-
         </Nav>
 
         <Nav className="profile d-flex align-items-center">
@@ -35,6 +35,7 @@ export default function Navi() {
             <NavDropdown.Item>Oturumu Kapat</NavDropdown.Item>
           </NavDropdown>
         </Nav>
+        
       </Navbar.Collapse>
     </Container>
   </Navbar>

@@ -1,0 +1,40 @@
+
+
+.welcomeTobeto{
+    font-family: 'Arial', sans-serif;
+    font-size: 20px;
+    font-weight: 400!important;
+}
+.welcomeTobeto span{
+    font-family: "DM Sans",ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",
+    Arial,"Noto Sans",sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji";
+    text-transform: uppercase;
+    color:#9933FF;
+    font-size:20px;
+    font-weight: 700!important;
+}
+.descTobeto{
+    font-size: 16px;
+    font-weight: 100;
+}
+
+
+.ik-logo-platform{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    background-image: url('https://tobeto.com/_next/static/media/ik-logo-dark.7938c0de.svg') ;
+    width: 200px;
+    height: 100px;
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+.ik-logo-platform-desc{
+    font-size: 17px;
+}
+.quote{
+    font-size: 17px;
+    color:#00D29B;
+    font-weight: bold;
+}

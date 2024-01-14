@@ -17,7 +17,7 @@ export default function Footer() {
         </Col>
         <Col md={6}>
           <div className="text-center">
-            <Button className="btn btn-sm btn-light">Bize UIlaşın</Button>
+            <Button className="btn btn-sm btn-light">Bize Ulaşın</Button>
           </div>
         </Col>
       </Row>

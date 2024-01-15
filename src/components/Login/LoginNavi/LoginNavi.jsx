@@ -6,7 +6,8 @@ import './LoginNavi.css';
 export default function LoginNavi() {
   return (
   <>
-<div>
+<div className="row">
+  <div className='col-12'>
       <div className="ik-banner">
         <div className="container">
           <div className="ik-banner-top">
@@ -25,13 +26,14 @@ export default function LoginNavi() {
         </div>
       </div>
     </div>
+  </div>
 
 <div className="row">
+  <div className="col-12">
     <Navbar expand="sm" className="bg-dark">
     <Container>
-      <Navbar.Brand href="#home">
-        <Image src="https://tobeto.com/_next/image?url=%2F_next%2Fstatic%2Fmedia%2FTebeto-logo-yatay-beyaz.8c2d6927.png&w=256&q=75" width={"100px"} className="m-3" />
-      </Navbar.Brand>
+        <Image src="https://tobeto.com/_next/image?url=%2F_next%2Fstatic%2Fmedia%2FTebeto-logo-yatay-beyaz.8c2d6927.png&w=256&q=75"
+         width={"100px"} className="m-3" fluid/>
       <Navbar.Toggle aria-controls="basic-navbar-nav" />
   
       <Navbar.Collapse id="basic-navbar-nav">
@@ -43,19 +45,10 @@ export default function LoginNavi() {
           <Nav.Link to="#home" className="p-4 text-white">Tobeto'da Bu Ay</Nav.Link>
         </Nav>
   
-        <Nav className="profile d-flex align-items-center">
-          <Nav.Link className="text-white me-3">
-            <FontAwesomeIcon icon={faSave} style={{ color: 'purple' }} />
-          </Nav.Link>
-          <NavDropdown title="İsim Soyisim" id="profile-dropdown" className="text-white">
-            <NavDropdown.Item>Profil Bilgileri</NavDropdown.Item>
-            <NavDropdown.Divider />
-            <NavDropdown.Item>Oturumu Kapat</NavDropdown.Item>
-          </NavDropdown>
-        </Nav>
       </Navbar.Collapse>
     </Container>
   </Navbar>
+  </div>
   </div>
   </>
   )

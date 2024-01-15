@@ -40,6 +40,7 @@ function App() {
           <>
         <LoginNavi/>
         <Login />
+        <LoginFooter/>
         </>
         } 
         />
@@ -48,6 +49,7 @@ function App() {
           <>
         <LoginNavi/>
         <About />
+        <LoginFooter/>
         </>
         } 
         />

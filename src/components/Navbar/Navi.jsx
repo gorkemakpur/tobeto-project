@@ -8,14 +8,12 @@ export default function Navi() {
   return (
     <Navbar expand="sm" className="bg-body-tertiary">
     <Container >
-      <Navbar.Brand href="#home">
          <Image src="https://tobeto.com/_next/static/media/tobeto-logo.29b55e1c.svg" width={"100px"} className="m-3"></Image>
-      </Navbar.Brand>
+      
       <Navbar.Toggle aria-controls="basic-navbar-nav" />
 
 
       <Navbar.Collapse id="basic-navbar-nav">
-
         <Nav className="mx-auto" expand="sm">
           <Nav.Link to="#home" className="p-4">Anasayfa</Nav.Link>
           <Nav.Link to="#link" className="p-4">Profilim</Nav.Link>
@@ -25,7 +23,7 @@ export default function Navi() {
           <Nav.Link to="#link" className="p-4">İstanbul Kodluyor</Nav.Link>
         </Nav>
 
-        <Nav className="profile d-flex align-items-center">
+        <Nav className="d-flex align-items-center">
           <Nav.Link className="text-white me-3">
             <FontAwesomeIcon icon={faSave} style={{ color: 'purple' }} />
           </Nav.Link>

@@ -9,7 +9,7 @@ export default function Login() {
         
         <div className="col-3">
         <div className="login-main">
-        <div className="login card">
+        <div className="login card-login-animation">
           <div className="form">
             <form noValidate>
               <Image

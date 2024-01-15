@@ -18,7 +18,10 @@
     font-weight: 100;
 }
 
-
+.bold-desc{
+    font-size: larger;
+    font-weight: bold;
+}
 .ik-logo-platform{
     display: flex;
     justify-content: center;

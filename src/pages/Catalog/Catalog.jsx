@@ -1,9 +1,7 @@
 import React from "react";
 import "./Catalog.css";
 import { Card, ListGroup, Row } from "react-bootstrap";
-import { Link } from "react-router-dom";
-import { faPlay, faPlayCircle} from "@fortawesome/free-solid-svg-icons";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import {BsClock,BsPerson,BsPlayCircleFill} from "react-icons/bs";
 
 export default function Catalog() {
   return (
@@ -29,35 +27,79 @@ export default function Catalog() {
       </div>
       {/*katalog sol menü bitiş*/}
 
+      {/*sağdaki eğitim listesi*/}
       <div className="col-8">
         <Row>
-          <div className="col-4 sm">
-            <Row>
-              <Card style={{ width: "300px", height: "300px" }}>
-              
-                <Card.Img
-                  variant="top"
-                  src="https://tobeto.s3.cloud.ngn.com.tr/ENK_36573_a8546fa0ff.jpg"
-                  width={"50px"}
-                  height={"150px"}
-                  
-                />
-                <Card.Text>Tobeto Eğitmen</Card.Text>
-                <Card.Text>4 saat 14 dakika</Card.Text>
-                <Card.Body className="text-white">
-                  
-                  <Card.Text>Dinle Anla İfade Et</Card.Text>
-                </Card.Body>
-                <Link to="#">Go somewhere</Link>
-                
-              </Card>
-            </Row>
-          </div>
-          <div className="col-4"></div>
+          <div className="col-4">
+            <Card
+              style={{
+                width: "18rem",
+                cursor: "pointer",
+                borderRadius: "15px",
+                position: "relative",
+              }}
+            >
+              <Card.Img
+                variant="top"
+                src="https://tobeto.s3.cloud.ngn.com.tr/ENK_36573_a8546fa0ff.jpg"
+                className="edubox-img"
+                style={{ borderRadius: "15px" }}
+              />
+              <BsPlayCircleFill
+                color="#8014E4"
+                size={30}
+                style={{
+                  position: "absolute",
+                  top: "10px",
+                  right: "10px",
+                  cursor: "pointer",
+                }}
+              />
 
-          <div className="col-4"></div>
+              <Card.Body
+                style={{
+                  height:"100px",
+                  position: "absolute",
+                  bottom: "0",
+                  left: "0",
+                  width: "100%",
+                  backgroundColor: "rgba(65,65,65,.5)",
+                  backdropFilter:"blur(21.5px)",
+                  color: "white",
+                  padding: "15px",
+                }}
+              >
+                <Row>
+                  <div
+                    className="col-12"
+                    style={{
+                      display: "flex",
+                      justifyContent: "space-between",
+                      alignItems: "center",
+                    }}
+                  >
+                    <Card.Text className="pro" style={{ marginLeft: "5px" }}>
+                      <BsPerson />
+                      Gürkan İlişen - <BsClock />
+                      4s 14dk
+                    </Card.Text>
+                  </div>
+                  <div className="col-12">
+                    <Card.Title
+                      className="name"
+                      style={{ marginTop: "10px", fontWeight: "bold" }}
+                    >
+                      Dinle, Anla, İfade Et: Etkili İletişim Gelişim Yolculuğu
+                    </Card.Title>
+                  </div>
+                </Row>
+              </Card.Body>
+            </Card>
+          </div>
+          <div></div>
         </Row>
       </div>
+      {/*sağdaki eğitim listesi bitiş*/}
     </Row>
   );
 }

@@ -12,6 +12,7 @@ import Login from "./pages/Login/Login";
 import LoginNavi from "./components/Login/LoginNavi/LoginNavi";
 import LoginFooter from "./components/Login/LoginFooter/LoginFooter";
 import About from "./pages/About/About";
+import Activity from "./pages/Activity/Activity";
 
 function App() {
   return (
@@ -63,7 +64,12 @@ function App() {
         } 
         />
 
-
+<Route path="/activity" element={
+          <>
+        <Activity />
+        </>
+        } 
+        />
       </Routes>
   );
 }

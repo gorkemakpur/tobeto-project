@@ -96,12 +96,12 @@ export default function Activity() {
                     />
                   </div>
                 </div>
-              </Col>
-              <Col lg={12}>
                 <ProgressBar now={50} label={`50%`} />
               </Col>
+              
             </Row>
-            <Col lg={12}>
+
+            <Col lg={12} style={{marginTop:"30px"}}>
               <div className="activity-content-menu LXP-Collapse">
                 <Nav variant="tabs" defaultActiveKey="/home">
                   <Nav.Item>

@@ -1,36 +1,83 @@
-import React from "react";
+import React, { useState } from "react";
 import "./Catalog.css";
-import { Card, ListGroup, Row } from "react-bootstrap";
-import {BsClock,BsPerson,BsPlayCircleFill} from "react-icons/bs";
+import { Card, Col, ListGroup, Row,Dropdown, Button} from "react-bootstrap";
+import { BsClock, BsPerson, BsPlayCircleFill } from "react-icons/bs";
 
 export default function Catalog() {
+  const menuItems = ["Kategori", "Eğitimler", "Seviye", "Konu", "Yazılım Dili", "Eğitmen"];
+  const [selectedMenu, setSelectedMenu] = useState(null);
+
+  const handleMenuClick = (menu) => {
+    setSelectedMenu(selectedMenu === menu ? null : menu);
+  };
+
   return (
     <Row className="mt-3">
-      {/*katalog sol menü */}
-      <div className="col-4">
-        <Row>
-          <div className="col-4"></div>
-          <div className="col-8">
-            <Card style={{ width: "18rem" }}>
-              <Card.Header>Filtrele</Card.Header>
-              <ListGroup variant="flush">
-                <ListGroup.Item>Kategori</ListGroup.Item>
-                <ListGroup.Item>Eğitimler</ListGroup.Item>
-                <ListGroup.Item>Seviye</ListGroup.Item>
-                <ListGroup.Item>Konu</ListGroup.Item>
-                <ListGroup.Item>Yazılım Dili</ListGroup.Item>
-                <ListGroup.Item>Eğitmen</ListGroup.Item>
-              </ListGroup>
-            </Card>
-          </div>
-        </Row>
-      </div>
-      {/*katalog sol menü bitiş*/}
+      {/* katalog sol menü */}
+      <Col lg={4} md={12} className="mb-4">
+      <Row>
+        <Col lg={5}></Col>
+        <Col lg={7}>
+          <Card style={{ width: "15rem" }}>
+            <Card.Header
+              style={{
+                backgroundColor: "#fff",
+                color: "#000",
+              }}
+            >
+              <h3>
+                Filtrele
+                </h3>
+            </Card.Header>
 
-      {/*sağdaki eğitim listesi*/}
-      <div className="col-8">
+            <ListGroup variant="flush">
+              {menuItems.map((item, index) => (
+                <ListGroup.Item key={index} style={{ cursor: "pointer", color: "#847B8D", borderBottom: "1px solid #847B8D", position: "relative", borderRadius: "15px" }}>
+                  <Button
+                    variant={selectedMenu === item ? "primary" : "outline-secondary"}
+                    onClick={() => handleMenuClick(item)}
+                    style={{
+                      width: "100%",
+                      textAlign: "left",
+                      borderRadius: "15px",
+                      display: "flex",
+                      justifyContent: "space-between",
+                      alignItems: "center",
+                      padding: "10px",
+                      backgroundColor: selectedMenu === item ? "#9933FF" : "transparent",
+                      color: selectedMenu === item ? "#fff" : "#847B8D",
+                    }}
+                  >
+                    {item}
+                    <span style={{ color: "#000", fontSize: "20px" }}>{selectedMenu === item ? "▲" : "ᐯ"}</span>
+                  </Button>
+
+                  {selectedMenu === item && (
+                    <div style={{ marginLeft: "20px", marginTop: "10px" }}>
+                      <input type="text" placeholder="Arama" style={{ marginBottom: "10px" }} />
+                      <div>
+                        <input type="radio" />
+                        <span>Radio 1</span>
+                      </div>
+                      <div>
+                        <input type="radio" />
+                        <span>Radio 2</span>
+                      </div>
+                    </div>
+                  )}
+                </ListGroup.Item>
+              ))}
+            </ListGroup>
+          </Card>
+        </Col>
+      </Row>
+    </Col>
+      {/* katalog sol menü bitiş */}
+
+      {/* sağdaki eğitim listesi */}
+      <Col lg={8} md={12}>
         <Row>
-          <div className="col-3">
+          <Col lg={3} md={6} sm={12} className="mb-4">
             <Card
               style={{
                 width: "18rem",
@@ -42,7 +89,6 @@ export default function Catalog() {
               <Card.Img
                 variant="top"
                 src="https://tobeto.s3.cloud.ngn.com.tr/ENK_36573_a8546fa0ff.jpg"
-                className="edubox-img"
                 style={{ borderRadius: "15px" }}
               />
               <BsPlayCircleFill
@@ -58,45 +104,44 @@ export default function Catalog() {
 
               <Card.Body
                 style={{
-                  height:"100px",
+                  height: "100px",
                   position: "absolute",
                   bottom: "0",
                   left: "0",
                   width: "100%",
                   backgroundColor: "rgba(65,65,65.5)",
-                  backdropFilter:"blur(21.5px)",
+                  backdropFilter: "blur(21.5px)",
                   color: "white",
                   padding: "15px",
                 }}
               >
                 <Row>
-                  <div
-                    className="col-12"
+                  <Col
+                    lg={12}
                     style={{
                       display: "flex",
                       justifyContent: "space-between",
                       alignItems: "center",
                     }}
                   >
-                    <Card.Text className="pro" style={{ marginLeft: "5px" }}>
+                    <Card.Text style={{ marginLeft: "5px", fontWeight:"100",fontSize:"12px"}}>
                       <BsPerson />
                       Gürkan İlişen - <BsClock />
                       4s 14dk
                     </Card.Text>
-                  </div>
-                  <div className="col-12">
+                  </Col>
+                  <Col lg={12}>
                     <Card.Title
-                      className="name"
                       style={{ marginTop: "10px", fontWeight: "bold" }}
                     >
                       Dinle, Anla, İfade Et: Etkili İletişim Gelişim Yolculuğu
                     </Card.Title>
-                  </div>
+                  </Col>
                 </Row>
               </Card.Body>
             </Card>
-          </div>
-          <div className="col-3">
+          </Col>
+          <Col lg={3} md={6} sm={12} className="mb-4">
             <Card
               style={{
                 width: "18rem",
@@ -108,7 +153,6 @@ export default function Catalog() {
               <Card.Img
                 variant="top"
                 src="https://tobeto.s3.cloud.ngn.com.tr/ENK_365670_08eb2bab1a.jpg"
-                className="edubox-img"
                 style={{ borderRadius: "15px" }}
               />
               <BsPlayCircleFill
@@ -124,45 +168,44 @@ export default function Catalog() {
 
               <Card.Body
                 style={{
-                  height:"100px",
+                  height: "100px",
                   position: "absolute",
                   bottom: "0",
                   left: "0",
                   width: "100%",
-                  backgroundColor: "rgba(65,65,65,.5)",
-                  backdropFilter:"blur(21.5px)",
+                  backgroundColor: "rgba(65,65,65.5)",
+                  backdropFilter: "blur(21.5px)",
                   color: "white",
                   padding: "15px",
                 }}
               >
                 <Row>
-                  <div
-                    className="col-12"
+                  <Col
+                    lg={12}
                     style={{
                       display: "flex",
                       justifyContent: "space-between",
                       alignItems: "center",
                     }}
                   >
-                    <Card.Text className="pro" style={{ marginLeft: "5px" }}>
+                    <Card.Text style={{ marginLeft: "5px", fontWeight:"100",fontSize:"12px"}}>
                       <BsPerson />
                       Gürkan İlişen - <BsClock />
-                      40dk
+                      1s 14dk
                     </Card.Text>
-                  </div>
-                  <div className="col-12">
+                  </Col>
+                  <Col lg={12}>
                     <Card.Title
-                      className="name"
                       style={{ marginTop: "10px", fontWeight: "bold" }}
                     >
                       Sürdürülebilir Bir Dünya için Bireysel Farkındalık
                     </Card.Title>
-                  </div>
+                  </Col>
                 </Row>
               </Card.Body>
             </Card>
-          </div>
-          <div className="col-3">
+          </Col>
+          <Col lg={3} md={6} sm={12} className="mb-4">
             <Card
               style={{
                 width: "18rem",
@@ -173,8 +216,7 @@ export default function Catalog() {
             >
               <Card.Img
                 variant="top"
-                src="https://tobeto.s3.cloud.ngn.com.tr/ENK_365693_fd2d22fa3a.jpg"
-                className="edubox-img"
+                src="https://tobeto.s3.cloud.ngn.com.tr/ENK_36573_a8546fa0ff.jpg"
                 style={{ borderRadius: "15px" }}
               />
               <BsPlayCircleFill
@@ -190,49 +232,48 @@ export default function Catalog() {
 
               <Card.Body
                 style={{
-                  height:"100px",
+                  height: "100px",
                   position: "absolute",
                   bottom: "0",
                   left: "0",
                   width: "100%",
-                  backgroundColor: "rgba(65,65,65,.5)",
-                  backdropFilter:"blur(21.5px)",
+                  backgroundColor: "rgba(65,65,65.5)",
+                  backdropFilter: "blur(21.5px)",
                   color: "white",
                   padding: "15px",
                 }}
               >
                 <Row>
-                  <div
-                    className="col-12"
+                  <Col
+                    lg={12}
                     style={{
                       display: "flex",
                       justifyContent: "space-between",
                       alignItems: "center",
                     }}
                   >
-                    <Card.Text className="pro" style={{ marginLeft: "5px" }}>
+                    <Card.Text style={{ marginLeft: "5px", fontWeight:"100",fontSize:"12px"}}>
                       <BsPerson />
                       Gürkan İlişen - <BsClock />
-                      53dk
+                      4s 14dk
                     </Card.Text>
-                  </div>
-                  <div className="col-12">
+                  </Col>
+                  <Col lg={12}>
                     <Card.Title
-                      className="name"
                       style={{ marginTop: "10px", fontWeight: "bold" }}
                     >
-                      Hibrit Yaşamda Duyguyu Düzenleme
+                      Dinle, Anla, İfade Et: Etkili İletişim Gelişim Yolculuğu
                     </Card.Title>
-                  </div>
+                  </Col>
                 </Row>
               </Card.Body>
             </Card>
-          </div>
-          <div className="col-3"></div>
-          
+          </Col>
+
+          <Col lg={3} md={6} sm={12} className="mb-4"></Col>
         </Row>
-      </div>
-      {/*sağdaki eğitim listesi bitiş*/}
+      </Col>
+      {/* sağdaki eğitim listesi bitiş */}
     </Row>
   );
 }

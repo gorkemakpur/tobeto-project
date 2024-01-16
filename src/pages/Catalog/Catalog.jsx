@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import "./Catalog.css";
-import { Card, Col, ListGroup, Row,Dropdown, Button} from "react-bootstrap";
+import { Card, Col, ListGroup, Row, Button} from "react-bootstrap";
 import { BsClock, BsPerson, BsPlayCircleFill } from "react-icons/bs";
 
 export default function Catalog() {

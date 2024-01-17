@@ -77,7 +77,7 @@ export default function Catalog() {
       {/* sağdaki eğitim listesi */}
       <Col lg={8} md={12}>
         <Row>
-          <Col lg={3} md={6} sm={12} className="mb-4">
+          <Col lg={4} md={6} sm={12} className="mb-4">
             <Card
               style={{
                 width: "18rem",
@@ -141,7 +141,7 @@ export default function Catalog() {
               </Card.Body>
             </Card>
           </Col>
-          <Col lg={3} md={6} sm={12} className="mb-4">
+          <Col lg={4} md={6} sm={12} className="mb-4">
             <Card
               style={{
                 width: "18rem",
@@ -205,7 +205,7 @@ export default function Catalog() {
               </Card.Body>
             </Card>
           </Col>
-          <Col lg={3} md={6} sm={12} className="mb-4">
+          <Col lg={4} md={6} sm={12} className="mb-4">
             <Card
               style={{
                 width: "18rem",
@@ -269,8 +269,6 @@ export default function Catalog() {
               </Card.Body>
             </Card>
           </Col>
-
-          <Col lg={3} md={6} sm={12} className="mb-4"></Col>
         </Row>
       </Col>
       {/* sağdaki eğitim listesi bitiş */}

@@ -1,13 +1,13 @@
 import { faSave } from '@fortawesome/free-solid-svg-icons'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import React from 'react'
-import { Button, Container, Image, Nav, NavDropdown, Navbar } from 'react-bootstrap'
+import { Button, Col, Container, Image, Nav, NavDropdown, Navbar, Row } from 'react-bootstrap'
 import './LoginNavi.css';
 export default function LoginNavi() {
   return (
   <>
-<div className="row">
-  <div className='col-12'>
+<Row>
+  <Col lg={12} md={12} sm={12}>
       <div className="ik-banner">
         <div className="container">
           <div className="ik-banner-top">
@@ -25,11 +25,11 @@ export default function LoginNavi() {
           </div>
         </div>
       </div>
-    </div>
-  </div>
+    </Col>
+  </Row>
 
-<div className="row">
-  <div className="col-12">
+<Row>
+  <Col lg={12}>
     <Navbar expand="sm" className="bg-dark">
     <Container>
         <Image src="https://tobeto.com/_next/image?url=%2F_next%2Fstatic%2Fmedia%2FTebeto-logo-yatay-beyaz.8c2d6927.png&w=256&q=75"
@@ -48,8 +48,8 @@ export default function LoginNavi() {
       </Navbar.Collapse>
     </Container>
   </Navbar>
-  </div>
-  </div>
+  </Col>
+  </Row>
   </>
   )
 }

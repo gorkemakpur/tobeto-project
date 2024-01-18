@@ -1,34 +1,34 @@
 import React from "react";
 import "./Platform.css";
-import { Image } from "react-bootstrap";
+import { Col, Image, Row } from "react-bootstrap";
 export default function Platform() {
   return (
     <>
       <div>
         <div className="container">
           {/* tobetoya hoşgeldin kısmı başlangıç*/}
-          <div className="row">
-            <div className="col-4"></div>
+          <Row>
+            <Col lg={4} md={6} sm={12}></Col>
             <div className="col-4 text-center mt-5 welcomeTobeto">
               <span>Tobeto</span>'ya hoş geldin
               <br /> Name Surname
             </div>
-            <div className="col-4 d-flex justify-content-end p-4">
+            <Col lg={4} md={8} sm={12} className="d-flex justify-content-end p-4">
               <Image
                 src="https://tobeto.com/_next/static/media/dot-purple.e0e5c9d8.svg"
                 style={{ width: "75px", height: "75px" }}
               />
-            </div>
-          </div>
+            </Col>
+          </Row>
           {/* tobetoya hoşgeldin kısmı son */}
 
           {/* tobetoya hoşgeldin alt açıklama kısmı başlangıç*/}
-          <div className="row">
-            <div className="col-12 text-center mt-4 descTobeto">
+          <Row>
+            <Col lg={12} md={6} sm={4} className="text-center mt-4 descTobeto">
               Yeni nesil öğrenme deneyimi ile Tobeto kariyer yolculuğunda senin
               yanında!
-            </div>
-          </div>
+            </Col>
+          </Row>
           {/* tobetoya hoşgeldin alt açıklama kısmı son */}
         </div>
 
@@ -42,20 +42,20 @@ export default function Platform() {
                 src="https://tobeto.com/_next/static/media/ik-logo-dark.7938c0de.svg"
                 style={{ width: "250px", height: "250px" }}
               />
-                <div className="col-12 text-center mt-0 ik-logo-platform-desc">
+                <Col lg={12} md={8} sm={4} className="text-center mt-0 ik-logo-platform-desc">
                   Ücretsiz eğitimlerle, geleceğin mesleklerinde sen de yerini
                   al.
                   <br />
                   <span className="bold-desc">Aradığın <span className="quote"> “</span>İş
                   <span className="quote">”</span>  Burada!</span>
-                </div>
+                </Col>
               </div>
 
               {/* istanbul kodluyor image Bitiş */}
 
               {/* */}
-              <div className="row">
-                <div className="col-12 mb-4 mt-3 ">
+              <Row>
+                <Col lg={12} className="mb-4 mt-3 ">
                   <ul
                     className="nav nav-tabs mainTablist justify-content-center p-3"
                     id="myTab"
@@ -121,12 +121,12 @@ export default function Platform() {
                       </button>
                     </li>
                   </ul>
-                </div>
-              </div>
+                </Col>
+              </Row>
 
               {/* */}
 
-              <div className="col-12">
+              <Col lg={12} md={8} sm={4}>
                 <div className="tab-content" id="myTabContent">
                   <div
                     className="tab-pane fade show active"
@@ -135,8 +135,8 @@ export default function Platform() {
                     aria-labelledby="apply-tab"
                     tabIndex={0}
                   >
-                    <div className="row">
-                      <div className="col-md-6 col-12 mt-2">
+                    <Row>
+                      <Col lg={12} md={8} sm={4} className="mt-2">
                         <div className="status-card status_accepted">
                           <span className="form_name">İstanbul Kodluyor</span>
                           <span className="form_status" />
@@ -182,8 +182,8 @@ export default function Platform() {
                             </div>
                           </div>
                         </div>
-                      </div>
-                    </div>
+                      </Col>
+                    </Row>
                   </div>
                   <div
                     className="tab-pane fade"
@@ -192,8 +192,8 @@ export default function Platform() {
                     aria-labelledby="lessons-tab"
                     tabIndex={0}
                   >
-                    <div className="row mt-3">
-                      <div className="col-12">
+                    <Row className="mt-3">
+                      <Col lg={12} md={8} sm={6}>
                         <div className="tab-content" id="myTabContent">
                           <div
                             className="tab-pane fade show active"
@@ -202,8 +202,8 @@ export default function Platform() {
                             aria-labelledby="all-lessons-tab"
                             tabIndex={0}
                           >
-                            <div className="row">
-                              <div className="col-md-3 col-12 mb-4">
+                            <Row>
+                              <Col lg={12} md={6} sm={3} className="mb-4">
                                 <div className="corp-edu-card">
                                   <div
                                     className="card-img"
@@ -224,8 +224,8 @@ export default function Platform() {
                                     <a className="apply-btn">Eğitime Git</a>
                                   </div>
                                 </div>
-                              </div>
-                              <div className="col-md-3 col-12 mb-4">
+                              </Col>
+                              <Col lg={12} md={3} className="mb-4">
                                 <div className="corp-edu-card">
                                   <div
                                     className="card-img"
@@ -244,8 +244,8 @@ export default function Platform() {
                                     <a className="apply-btn">Eğitime Git</a>
                                   </div>
                                 </div>
-                              </div>
-                              <div className="col-md-3 col-12 mb-4">
+                              </Col>
+                              <Col md={3} lg={12} className="mb-4">
                                 <div className="corp-edu-card">
                                   <div
                                     className="card-img"
@@ -264,8 +264,8 @@ export default function Platform() {
                                     <a className="apply-btn">Eğitime Git</a>
                                   </div>
                                 </div>
-                              </div>
-                              <div className="col-md-3 col-12 mb-4">
+                              </Col>
+                              <Col lg={12} md={3} className="mb-4">
                                 <div className="corp-edu-card">
                                   <div
                                     className="card-img"
@@ -286,8 +286,8 @@ export default function Platform() {
                                     <a className="apply-btn">Eğitime Git</a>
                                   </div>
                                 </div>
-                              </div>
-                            </div>
+                              </Col>
+                            </Row>
                           </div>
                           <div
                             className="tab-pane fade "
@@ -296,8 +296,8 @@ export default function Platform() {
                             aria-labelledby="started-tab"
                             tabIndex={0}
                           >
-                            <div className="row">
-                              <div className="col-md-3 col-12 mb-4">
+                            <Row>
+                              <Col lg={12} md={3} className="mb-4">
                                 <div className="corp-edu-card">
                                   <div
                                     className="card-img"
@@ -318,8 +318,8 @@ export default function Platform() {
                                     <a className="apply-btn">Eğitime Git</a>
                                   </div>
                                 </div>
-                              </div>
-                              <div className="col-md-3 col-12 mb-4">
+                              </Col>
+                              <Col lg={12} md={3} className="mb-4">
                                 <div className="corp-edu-card">
                                   <div
                                     className="card-img"
@@ -338,8 +338,8 @@ export default function Platform() {
                                     <a className="apply-btn">Eğitime Git</a>
                                   </div>
                                 </div>
-                              </div>
-                              <div className="col-md-3 col-12 mb-4">
+                              </Col>
+                              <Col lg={12} md={3} className="mb-4">
                                 <div className="corp-edu-card">
                                   <div
                                     className="card-img"
@@ -358,8 +358,8 @@ export default function Platform() {
                                     <a className="apply-btn">Eğitime Git</a>
                                   </div>
                                 </div>
-                              </div>
-                              <div className="col-md-3 col-12 mb-4">
+                              </Col>
+                              <Col lg={12} md={3} className="mb-4">
                                 <div className="corp-edu-card">
                                   <div
                                     className="card-img"
@@ -380,8 +380,8 @@ export default function Platform() {
                                     <a className="apply-btn">Eğitime Git</a>
                                   </div>
                                 </div>
-                              </div>
-                            </div>
+                              </Col>
+                            </Row>
                           </div>
                           <div
                             className="tab-pane fade "
@@ -390,8 +390,8 @@ export default function Platform() {
                             aria-labelledby="done-lessons-tab"
                             tabIndex={0}
                           >
-                            <div className="row">
-                              <div className="col-md-3 col-12 mb-4">
+                            <Row>
+                              <Col lg={12} md={3} className="mb-4">
                                 <div className="corp-edu-card">
                                   <div
                                     className="card-img"
@@ -412,8 +412,8 @@ export default function Platform() {
                                     <a className="apply-btn">Eğitime Git</a>
                                   </div>
                                 </div>
-                              </div>
-                              <div className="col-md-3 col-12 mb-4">
+                              </Col>
+                              <Col lg={12} md={3} className="mb-4">
                                 <div className="corp-edu-card">
                                   <div
                                     className="card-img"
@@ -432,8 +432,8 @@ export default function Platform() {
                                     <a className="apply-btn">Eğitime Git</a>
                                   </div>
                                 </div>
-                              </div>
-                              <div className="col-md-3 col-12 mb-4">
+                              </Col>
+                              <Col lg={12} md={3} className="mb-4">
                                 <div className="corp-edu-card">
                                   <div
                                     className="card-img"
@@ -452,8 +452,8 @@ export default function Platform() {
                                     <a className="apply-btn">Eğitime Git</a>
                                   </div>
                                 </div>
-                              </div>
-                              <div className="col-md-3 col-12 mb-4">
+                              </Col>
+                              <Col lg={12} md={3} className="mb-4">
                                 <div className="corp-edu-card">
                                   <div
                                     className="card-img"
@@ -474,13 +474,13 @@ export default function Platform() {
                                     <a className="apply-btn">Eğitime Git</a>
                                   </div>
                                 </div>
-                              </div>
-                            </div>
+                              </Col>
+                            </Row>
                           </div>
                         </div>
                         <div className="showMoreBtn">Daha Fazla Göster</div>
-                      </div>
-                    </div>
+                      </Col>
+                    </Row>
                   </div>
                   <div
                     className="tab-pane fade"
@@ -489,8 +489,8 @@ export default function Platform() {
                     aria-labelledby="notification-tab"
                     tabIndex={0}
                   >
-                    <div className="row">
-                      <div className="col-md-4 col-12 my-4">
+                    <Row>
+                      <Col lg={12} md={4} className="my-4">
                         <div className="notfy-card notify">
                           <div className="d-flex flex-column">
                             <div className="d-flex justify-content-between mb-4">
@@ -508,8 +508,8 @@ export default function Platform() {
                             <span className="read-more">Devamını Oku</span>
                           </div>
                         </div>
-                      </div>
-                      <div className="col-md-4 col-12 my-4">
+                      </Col>
+                      <Col lg={12} md={4} className="my-4">
                         <div className="notfy-card notify">
                           <div className="d-flex flex-column">
                             <div className="d-flex justify-content-between mb-4">
@@ -527,8 +527,8 @@ export default function Platform() {
                             <span className="read-more">Devamını Oku</span>
                           </div>
                         </div>
-                      </div>
-                      <div className="col-md-4 col-12 my-4">
+                      </Col>
+                      <Col lg={12} md={4} className="my-4">
                         <div className="notfy-card notify">
                           <div className="d-flex flex-column">
                             <div className="d-flex justify-content-between mb-4">
@@ -546,9 +546,9 @@ export default function Platform() {
                             <span className="read-more">Devamını Oku</span>
                           </div>
                         </div>
-                      </div>
+                      </Col>
                       <div className="showMoreBtn">Daha Fazla Göster</div>
-                    </div>
+                    </Row>
                   </div>
                   <div
                     className="tab-pane fade"
@@ -557,8 +557,8 @@ export default function Platform() {
                     aria-labelledby="applications-tab"
                     tabIndex={0}
                   >
-                    <div className="row">
-                      <div className="col-md-4 col-12 my-4">
+                    <Row>
+                      <Col lg={12} md={4} className="my-4">
                         <div className="notfy-card news">
                           <div className="d-flex flex-column">
                             <div className="d-flex justify-content-between mb-4">
@@ -578,8 +578,8 @@ export default function Platform() {
                             </span>
                           </div>
                         </div>
-                      </div>
-                      <div className="col-md-4 col-12 my-4">
+                      </Col>
+                      <Col lg={12} md={4} className="my-4">
                         <div className="notfy-card news">
                           <div className="d-flex flex-column">
                             <div className="d-flex justify-content-between mb-4">
@@ -599,8 +599,8 @@ export default function Platform() {
                             </span>
                           </div>
                         </div>
-                      </div>
-                      <div className="col-md-4 col-12 my-4">
+                      </Col>
+                      <Col lg={12} md={4} className="my-4">
                         <div className="notfy-card news">
                           <div className="d-flex flex-column">
                             <div className="d-flex justify-content-between mb-4">
@@ -620,9 +620,9 @@ export default function Platform() {
                             </span>
                           </div>
                         </div>
-                      </div>
+                      </Col>
                       <div className="showMoreBtn">Daha Fazla Göster</div>
-                    </div>
+                    </Row>
                   </div>
                   <div
                     className="tab-pane fade"
@@ -638,13 +638,13 @@ export default function Platform() {
                     </div>
                   </div>
                 </div>
-              </div>
+              </Col>
             </div>
           </div>
         </section>
 
-        <div className="row margin-platform-card-row centered-row">
-          <div className="col-md-3 col-12 margin-platform-card margin-platform-card-background-1 ">
+        <Row className="margin-platform-card-row centered-row">
+          <Col lg={12} md={3} className="margin-platform-card margin-platform-card-background-1 ">
             <div className="card-inside-row1">
               Profilini oluştur<br/> 
             </div>
@@ -653,8 +653,8 @@ export default function Platform() {
                 Başla
               </button></a>
             </div>
-          </div>
-          <div className="col-md-3 col-12 margin-platform-card margin-platform-card-background-2">
+          </Col>
+          <Col lg={12} md={3} className="margin-platform-card margin-platform-card-background-2">
             <div className="card-inside-row1">
               Kendini değerlendir
             </div>
@@ -663,8 +663,8 @@ export default function Platform() {
                 Başla
               </button></a>
             </div>
-          </div>
-          <div className="col-md-3 col-12 margin-platform-card margin-platform-card-background-3">
+          </Col>
+          <Col lg={12} md={3} className="margin-platform-card margin-platform-card-background-3">
             <div className="card-inside-row1">
               Öğrenmeye <br/> başla
             </div>
@@ -673,8 +673,8 @@ export default function Platform() {
                 Başla
               </button></a>
             </div>
-          </div>
-        </div>
+          </Col>
+        </Row>
       </div>
     </>
   );

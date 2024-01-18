@@ -5,9 +5,9 @@ export default function Login() {
   return (
     <>
         <Row>
-          <div className="col-3"></div>
+          <Col lg={3} md={6} sm={12}></Col>
         
-        <div className="col-3">
+        <Col lg={3} md={6} sm={12}>
         <div className="login-main">
         <div className="login card-login-animation">
           <div className="form">
@@ -37,8 +37,8 @@ export default function Login() {
           </div>
         </div>
         </div>
-        </div>
-        <div className="col-3">
+        </Col>
+        <Col lg={3} md={6} sm={12}>
         <div className="login card-right">
 
           <div className="form">
@@ -57,7 +57,7 @@ export default function Login() {
           </div>
 
         </div>
-        </div>
+        </Col>
         <div className="col-3"></div>
         
         </Row>

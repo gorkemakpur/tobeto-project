@@ -4,8 +4,8 @@ import { Button, Col, Image, Row } from "react-bootstrap";
 export default function Login() {
   return (
     <>
-        <Row>
-          <Col lg={3} md={6} sm={12}></Col>
+        <Row className="p-5 mb-5">
+        <Col lg={3} md={6} sm={12}></Col>
         
         <Col lg={3} md={6} sm={12}>
         <div className="login-main">

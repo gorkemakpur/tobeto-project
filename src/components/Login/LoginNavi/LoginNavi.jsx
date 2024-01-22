@@ -29,7 +29,7 @@ export default function LoginNavi() {
   </Row>
 
 <Row>
-  <Col lg={12}>
+  <Col lg={12} md={8} sm={4}>
     <Navbar expand="sm" className="bg-dark">
     <Container>
         <Image src="https://tobeto.com/_next/image?url=%2F_next%2Fstatic%2Fmedia%2FTebeto-logo-yatay-beyaz.8c2d6927.png&w=256&q=75"

@@ -43,6 +43,11 @@ const OffCanvas = () => {
         {isOpen && (
           <>
             <div className="row">
+            <div className="close-button-con">
+              <button className="close-button " onClick={togglePanel}>
+                ×
+              </button>
+            </div>
               <div className="" style={{ width: " 10px" }}></div>
               <div className="" style={{ width: " 160px" }}>
                 <img
@@ -51,7 +56,9 @@ const OffCanvas = () => {
                   alt="Eğitim Resmi"
                 />
               </div>
+              
               <div className="col">
+                
                 <div className=" col-8 edu-title-c ">
                   <div
                     className="row "
@@ -195,16 +202,22 @@ const OffCanvas = () => {
               </Col>
             </Row>
             <Row>
-                <Row style={{ paddingLeft: "80px", fontWeight:"bold",}}>
+              <Row style={{ paddingLeft: "80px", fontWeight: "bold" }}>
                 İçerik
-                </Row>
-                <Row style={{ paddingLeft: "80px", paddingTop:"20px", textAlign:"left"}}>
-                Bu video, Veri Tabanı ve Erişimi: Microsoft SQL Server Database Management eğitiminde aktarılan konular hakkında toparlayıcı ve özet bilgilerin yer aldığı bir kapanış videosudur.
-                </Row>
+              </Row>
+              <Row
+                style={{
+                  paddingLeft: "80px",
+                  paddingTop: "20px",
+                  textAlign: "left",
+                }}
+              >
+                Bu video, Veri Tabanı ve Erişimi: Microsoft SQL Server Database
+                Management eğitiminde aktarılan konular hakkında toparlayıcı ve
+                özet bilgilerin yer aldığı bir kapanış videosudur.
+              </Row>
             </Row>
-            <button className="close-button" onClick={togglePanel}>
-              ×
-            </button>
+
           </>
         )}
       </div>

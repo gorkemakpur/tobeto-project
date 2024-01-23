@@ -22,6 +22,7 @@ import Accordion from "./ListAccordion/ListAccordion";
 import OffCanvas from "./OffCanvas/OffCanvas";
 import { Row, Col } from "react-bootstrap";
 
+
 export default function Activity() {
   const [liked, setLiked] = useState(false);
   const [isBookmarked, setIsBookmarked] = useState(false);

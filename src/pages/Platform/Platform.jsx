@@ -5,15 +5,25 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
   faChevronRight,
   faCheckCircle,
-  faCalendar
+  faCalendar,
 } from "@fortawesome/free-solid-svg-icons";
 import { faClock } from "@fortawesome/free-regular-svg-icons";
-import { Link } from "react-router-dom";
+import { Link, NavLink  } from "react-router-dom";
+import Modal from "../../components/Modal/Modal";
 
 export default function Platform() {
   const [activeTab, setActiveTab] = useState("basvurularim");
   const handleTabClick = (tab) => {
     setActiveTab(tab);
+  };
+  const [showModal, setShowModal] = useState(false);
+
+  const openModal = () => {
+    setShowModal(true);
+  };
+
+  const closeModal = () => {
+    setShowModal(false);
   };
   return (
     <>
@@ -110,7 +120,7 @@ export default function Platform() {
                                 </span>
                               </Col>
                               <Col className="text-right">
-                                <div class="status-indicator">
+                                <div className="status-indicator">
                                   Kabul
                                   Edildi&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                                 </div>
@@ -125,8 +135,8 @@ export default function Platform() {
                         <Row>
                           <Col>
                             <Row className="edus-row">
-                              <Link to="/activity" className="edu-card-link  ">
-                                <div className="edu-card">
+                              <Link to="/activity" className="edu-card-link ">
+                                <div className="edu-card ">
                                   <div className="edu-card-image">
                                     <img src="https://lms.tobeto.com/tobeto/eep/common_show_picture_cached.aspx?pQS=eaAjNZ0uaOFNO7nf8wuXoA%3d%3d"></img>
                                   </div>
@@ -202,15 +212,13 @@ export default function Platform() {
                         </Row>
                         <Row className="all-edu-btn  ">
                           <div className="p-row-container">
-                            <a href="/egitimlerim" className="link-full-row">
-                              <button className="load-more-btn">
-                                <FontAwesomeIcon
-                                  icon={faChevronRight}
-                                  className="p-button-icon"
-                                />
-                                <span>Daha Fazla Göster</span>
-                              </button>
-                            </a>
+                          <Link to="/my-courses" className="link-full-row">
+  <button className="load-more-btn">
+    <FontAwesomeIcon icon={faChevronRight} className="p-button-icon"/>
+    <span>Daha Fazla Göster</span>
+  </button>
+</Link>
+
                           </div>
                         </Row>
                       </div>
@@ -221,110 +229,102 @@ export default function Platform() {
                         <Row>
                           <Col>
                             <Row className="anc-row">
-                           
-                                <Col className="anc-card">
-                                  <Row>
-                                    <Col>
+                              <Col className="anc-card">
+                                <Row>
+                                  <Col>
                                     <div className="anc-title">
                                       Duyuru{" "}
                                       <span className="anc-ik">
                                         İstanbul Kodluyor
-                                      </span></div>
-                                      <br></br>
-                                      <span className="anc-card-check">
-                                        Ocak Ayı Tercih Formu Bilgilendirmesi
-                                        <br></br>
-                                        <br></br>
-                                        <br></br>
                                       </span>
-                                      <Row className="anc-date-row">
-                                        <Col className="anc-date">
-                                        <FontAwesomeIcon icon={faCalendar} /> 12.01.2024{" "}
-                                        </Col>
-                                        <Col className="anc-link ">
-                                          {" "}
-                                          <Link
-                                            to="/announcement"
-                                            className="anc-link "
-                                          >
-                                            Devamını Oku
-                                          </Link>
-                                        </Col>
-                                      </Row>
-                                    </Col>
-                                  </Row>
-                                </Col>
-                                <Col className="anc-card">
-                                  <Row>
-                                    <Col>
+                                    </div>
+                                    <br></br>
+                                    <span className="anc-card-check">
+                                      Ocak Ayı Tercih Formu Bilgilendirmesi
+                                      <br></br>
+                                      <br></br>
+                                      <br></br>
+                                    </span>
+                                    <Row className="anc-date-row">
+                                      <Col className="anc-date">
+                                        <FontAwesomeIcon icon={faCalendar} />{" "}
+                                        12.01.2024{" "}
+                                      </Col>
+                                      <Col className="anc-link ">
+                                        {" "}
+                                        <button className="anc-link" onClick={openModal}>Devamını Oku</button>
+                                        {showModal && <Modal closeModal={closeModal} />}
+                                      </Col>
+                                    </Row>
+                                  </Col>
+                                </Row>
+                              </Col>
+                              <Col className="anc-card">
+                                <Row>
+                                  <Col>
                                     <div className="anc-title">
                                       Duyuru{" "}
                                       <span className="anc-ik">
                                         İstanbul Kodluyor
-                                      </span></div>
-                                      <br></br>
-                                      <span className="anc-card-check">
-                                        Ocak Ayı Tercih Formu Bilgilendirmesi
-                                        <br></br>
-                                        <br></br>
-                                        <br></br>
                                       </span>
-                                      <Row className="anc-date-row">
-                                        <Col className="anc-date">
-                                        <FontAwesomeIcon icon={faCalendar} /> 12.01.2024{" "}
-                                        </Col>
-                                        <Col className="anc-link ">
-                                          {" "}
-                                          <Link
-                                            to="/announcement"
-                                            className="anc-link "
-                                          >
-                                            Devamını Oku
-                                          </Link>
-                                        </Col>
-                                      </Row>
-                                    </Col>
-                                  </Row>
-                                </Col>
-                                <Col className="anc-card">
-                                  <Row>
-                                    <Col>
+                                    </div>
+                                    <br></br>
+                                    <span className="anc-card-check">
+                                      Ocak Ayı Tercih Formu Bilgilendirmesi
+                                      <br></br>
+                                      <br></br>
+                                      <br></br>
+                                    </span>
+                                    <Row className="anc-date-row">
+                                      <Col className="anc-date">
+                                        <FontAwesomeIcon icon={faCalendar} />{" "}
+                                        12.01.2024{" "}
+                                      </Col>
+                                      <Col className="anc-link ">
+                                        {" "}
+                                        <button className="anc-link" onClick={openModal}>Devamını Oku</button>
+                                        {showModal && <Modal closeModal={closeModal} />}
+                                      </Col>
+                                    </Row>
+                                  </Col>
+                                </Row>
+                              </Col>
+                              <Col className="anc-card">
+                                <Row>
+                                  <Col>
                                     <div className="anc-title">
                                       Duyuru{" "}
                                       <span className="anc-ik">
                                         İstanbul Kodluyor
-                                      </span></div>
-                                      <br></br>
-                                      <span className="anc-card-check">
-                                        Ocak Ayı Tercih Formu Bilgilendirmesi
-                                        <br></br>
-                                        <br></br>
-                                        <br></br>
                                       </span>
-                                      <Row className="anc-date-row">
-                                        <Col className="anc-date">
-                                        <FontAwesomeIcon icon={faCalendar} /> 12.01.2024{" "}
-                                        </Col>
-                                        <Col className="anc-link ">
-                                          {" "}
-                                          <Link
-                                            to="/announcement"
-                                            className="anc-link "
-                                          >
-                                            Devamını Oku
-                                          </Link>
-                                        </Col>
-                                      </Row>
-                                    </Col>
-                                  </Row>
-                                </Col>
-
+                                    </div>
+                                    <br></br>
+                                    <span className="anc-card-check">
+                                      Ocak Ayı Tercih Formu Bilgilendirmesi
+                                      <br></br>
+                                      <br></br>
+                                      <br></br>
+                                    </span>
+                                    <Row className="anc-date-row">
+                                      <Col className="anc-date">
+                                        <FontAwesomeIcon icon={faCalendar} />{" "}
+                                        12.01.2024{" "}
+                                      </Col>
+                                         <Col className="anc-link ">
+                                        {" "}
+                                        <button className="anc-link" onClick={openModal}>Devamını Oku</button>
+                                        {showModal && <Modal closeModal={closeModal} />}
+                                      </Col>
+                                    </Row>
+                                  </Col>
+                                </Row>
+                              </Col>
                             </Row>
                           </Col>
                         </Row>
                         <Row className="all-edu-btn  ">
                           <div className="p-row-container">
-                            <a href="/egitimlerim" className="link-full-row">
+                            <a href="/announcements" className="link-full-row">
                               <button className="load-more-btn">
                                 <FontAwesomeIcon
                                   icon={faChevronRight}
@@ -339,15 +339,18 @@ export default function Platform() {
                     )}
                     {activeTab === "survey" && (
                       <div className="tab-survey">
-            <Row>
-  <Col className="survey-area">
-    <img src="https://tobeto.com/_next/static/media/notFound.4015d44b.svg" alt="Not Found" className="survey-img" />
-    <div className="survey-text">
-      Atanmış herhangi bir anketiniz bulunmamaktadır
-    </div>
-  </Col>
-</Row>
-
+                        <Row>
+                          <Col className="survey-area">
+                            <img
+                              src="https://tobeto.com/_next/static/media/notFound.4015d44b.svg"
+                              alt="Not Found"
+                              className="survey-img"
+                            />
+                            <div className="survey-text">
+                              Atanmış herhangi bir anketiniz bulunmamaktadır
+                            </div>
+                          </Col>
+                        </Row>
                       </div>
                     )}
                   </div>
@@ -406,10 +409,7 @@ export default function Platform() {
                   Öğrenmeye <br /> başla
                 </div>
                 <div className="card-inside-row2">
-                  <a
-                    href="/platform-egitimler"
-                    className="button-link-unstyled"
-                  >
+                  <a href="/platform-edus" className="button-link-unstyled">
                     <button className="solid-color-button">Başla</button>
                   </a>
                 </div>

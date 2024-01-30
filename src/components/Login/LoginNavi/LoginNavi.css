@@ -35,7 +35,8 @@
     .ik-logo-platform {
         background-image: url("../../../wwwroot/Images/ik-logo.svg");
         background-repeat: no-repeat;
-        background-size: 100px;
+        font-size: 75px;
+        background-size: contain;
         padding-left: 100px;
     }
   

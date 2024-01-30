@@ -5,7 +5,7 @@ import { Link } from 'react-router-dom';
 
 export default function Footer() {
   return (
-    <footer className="footer fixed">
+    <footer className="footer fixed" style={{bottom:0,marginBottom:0}}>
     <Container>
       <Row>
         <Col md={6}>

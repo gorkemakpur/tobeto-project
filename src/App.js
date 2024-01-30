@@ -13,64 +13,94 @@ import LoginNavi from "./components/Login/LoginNavi/LoginNavi";
 import LoginFooter from "./components/Login/LoginFooter/LoginFooter";
 import About from "./pages/About/About";
 import Activity from "./pages/Activity/Activity";
+import MyCourses from "./pages/MyCourses/MyCourses";
+import MyAnnouncement from "./pages/MyAnnouncement/MyAnnouncement";
 
 function App() {
   return (
-
     <Routes>
-
-        <Route path="/" element={
-        <>
-        <Navi />
-        <HomePage />
-        <Footer/>
-        </>} 
-        />
-
-        <Route path="/platform" element={
+      <Route
+        path="/"
+        element={
           <>
-          <Navi />
-        <Platform />
-        <Footer/>
-        </>
-        } 
-        />
+            <Navi />
+            <HomePage />
+            <Footer />
+          </>
+        }
+      />
 
-
-        <Route path="/login" element={
+      <Route
+        path="/platform"
+        element={
           <>
-        <LoginNavi/>
-        <Login />
-        <LoginFooter/>
-        </>
-        } 
-        />
+            <Navi />
+            <Platform />
+            <Footer />
+          </>
+        }
+      />
 
-        <Route path="/about" element={
+      <Route
+        path="/login"
+        element={
           <>
-        <LoginNavi/>
-        <About />
-        <LoginFooter/>
-        </>
-        } 
-        />
+            <LoginNavi />
+            <Login />
+            <LoginFooter />
+          </>
+        }
+      />
 
-        <Route path="/catalog" element={
+      <Route
+        path="/about"
+        element={
           <>
-        <LoginNavi/>
-        <Catalog />
-        <LoginFooter/>
-        </>
-        } 
-        />
+            <LoginNavi />
+            <About />
+            <LoginFooter />
+          </>
+        }
+      />
 
-<Route path="/activity" element={
+      <Route
+        path="/catalog"
+        element={
           <>
-        <Activity />
-        </>
-        } 
-        />
-      </Routes>
+            <LoginNavi />
+            <Catalog />
+            <LoginFooter />
+          </>
+        }
+      />
+
+      <Route
+        path="/activity"
+        element={
+          <>
+            <Activity />
+          </>
+        }
+      />
+
+      <Route
+        path="/my-courses"
+        element={
+          <>
+            <MyCourses />
+          </>
+        }
+      />
+
+      <Route
+        path="/my-announcement"
+        element={
+          <>
+            <MyAnnouncement />
+          </>
+        }
+      />
+    </Routes>
   );
 }
 

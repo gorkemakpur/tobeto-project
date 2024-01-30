@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import './SortingDropdown.css'; // Stil dosyasını import edin
+import './SortingDropdown.css';
 
 function SortingDropdown({ onSortChange }) {
   const [sortOrder, setSortOrder] = useState('name-asc'); // Varsayılan sıralama düzeni

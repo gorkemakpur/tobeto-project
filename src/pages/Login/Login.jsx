@@ -22,14 +22,19 @@ export default function Login() {
       email,
       password,
     };
-    dispatch(loginUser(userCredentials)).then((result) => {
-      if (result.payload) {
+
+    let jsonUserCredentials = JSON.stringify(userCredentials);
+    console.log(jsonUserCredentials);
+
+    dispatch(loginUser(jsonUserCredentials)).then((result) => {
+      if (result.type === "user/loginUser/fulfilled") {
         setEmail("");
         setPassword("");
+        console.log("Navigating to /");
         navigate("/");
+        console.log(result);
       }
     });
-    
   };
 
   return (
@@ -37,7 +42,7 @@ export default function Login() {
       <Row className="p-5 mb-5">
         <Col lg={3} md={6} sm={12}></Col>
 
-        <Col lg={4} md={8} sm={12}>
+        <Col lg={3} md={6} sm={12}>
           <div className="login-main">
             <div className="login card-login-animation">
               <div className="form">
@@ -80,7 +85,7 @@ export default function Login() {
             </div>
           </div>
         </Col>
-        <Col lg={4} md={8} sm={12}>
+        <Col lg={3} md={6} sm={12}>
           <div className="login card-right">
             <div className="form">
               <div className="text-center mt-5">
@@ -98,6 +103,7 @@ export default function Login() {
             </div>
           </div>
         </Col>
+        <div className="col-3"></div>
       </Row>
     </>
   );

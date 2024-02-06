@@ -15,6 +15,7 @@ import About from "./pages/About/About";
 import Activity from "./pages/Activity/Activity";
 import MyCourses from "./pages/MyCourses/MyCourses";
 import MyAnnouncement from "./pages/MyAnnouncement/MyAnnouncement";
+import Register from "./pages/Register/Register";
 
 function App() {
   return (
@@ -47,6 +48,17 @@ function App() {
           <>
             <LoginNavi />
             <Login />
+            <LoginFooter />
+          </>
+        }
+      />
+
+<Route
+        path="/register"
+        element={
+          <>
+            <LoginNavi />
+            <Register />
             <LoginFooter />
           </>
         }
